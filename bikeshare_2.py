@@ -53,7 +53,7 @@ def get_filters():
         except (ValueError, TypeError, KeyboardInterrupt):
            print()
     city, month, day = filters
-    print("\nNow analyzing data for... \nCity: {} \nMonth: {} \nDay of the Week: {}.".format(city.title(), month.title(), day.title()))
+    print("\nNow analyzing data for...\n \nCity: {} \nMonth: {} \nDay of the Week: {}.".format(city.title(), month.title(), day.title()))
     print('-'*40)
     return city, month, day
 
@@ -180,12 +180,12 @@ def user_stats(df):
     
     # TO DO: Display counts of user types
     user_types = df['User Type'].value_counts()
-    print("\nThe counts of user types are as follows:\n{}".format(user_types))
+    print("\nThe counts of user types are as follows:\n\n{}".format(user_types))
 
     # TO DO: Display counts of gender
     if 'Gender' in df.columns: 
         gender_count = df['Gender'].value_counts()
-        print("\nThe counts of gender are as follows:\n{}".format(gender_count))
+        print("\nThe counts of gender are as follows:\n\n{}".format(gender_count))
     else:
         print("\nThere is no available data for gender")
         
