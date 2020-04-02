@@ -13,6 +13,9 @@ chicago.csv
 new_york_city.csv
 washington.csv
 
+### Text Editor used
+Sublime Text, Version 3.2.2, Build 3211
+
 ### Credits
 Python Credits:
 https://pandas.pydata.org/pandas-docs/version/0.23.3/generated/pandas.Series.dt.month_name.html
