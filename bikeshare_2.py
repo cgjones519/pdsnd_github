@@ -191,14 +191,11 @@ def user_stats(df):
         
     # TO DO: Display earliest, most recent, and most common year of birth
     if 'Birth Year' in df.columns:
-        earliest_dob = df['Birth Year'].min()
-        earliest_dob = int(earliest_dob)
+        earliest_dob = df['Birth Year'].min().astype('int64')
         print("\nThe earliest reported year of birth is {}.".format(earliest_dob))
-        recent_dob = df['Birth Year'].max()
-        recent_dob = int(recent_dob)
+        recent_dob = df['Birth Year'].max().astype('int64')
         print("\nThe most recent year of birth is {}.".format(recent_dob))
-        common_dob = df['Birth Year'].mode()[0]
-        common_dob = int(common_dob)
+        common_dob = df['Birth Year'].mode().astype('int64')[0]
         print("\nThe most common year of birth is {}.".format(common_dob))
     else: 
         print("There is no available data for year of birth")
